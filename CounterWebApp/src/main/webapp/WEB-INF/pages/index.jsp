@@ -7,27 +7,8 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sample Demo Module</title>
- <style>
-		body {
-			background-color: powderblue;
-		}
-		
-		h1 {
-			color: blue;
-			position: center;
-		}
-
-		h3 {
-			color: red;
-			position: center;
-		}
-		
-		div{
-			position: center;
-			background-image: url("images/welcome.jpg");
-		}
-</style>
-</head>
+ 	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+ </head>
 <body>
 <div>
  	<h1>Demo Application</h1> 
