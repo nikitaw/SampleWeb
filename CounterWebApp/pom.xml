@@ -72,45 +72,9 @@
 
 	</dependencies>
 
-<repositories>
-		<!-- Repository location for DWR - 3.0.0-rc3-SNAPSHOT -->
-		<repository>
-			<!-- Please consider setting up your own on-site repository proxy such 
-				as with Nexus and pointing the url element below at that instead -->
-			<id>oss-sonatype-snapshots</id>
-			<name>OSS Sonatype Snapshots Repository</name>
-			<url>http://oss.sonatype.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	
 	<build>
 		<finalName>CounterWebApp</finalName>
-		
-		<resources>
-			<resource>
-				<directory>src/main/resources</directory>
-				<filtering>true</filtering>
-				<includes>
-					<include>**/*.xml</include>
-					<include>**/*.properties</include>
-				</includes>
-			</resource>
-			<resource>
-				<directory>src/test/resources</directory>
-				<filtering>true</filtering>
-				<includes>
-					<include>**/*.xml</include>
-					<include>**/*.properties</include>
-				</includes>
-			</resource>
-		</resources>
-		
+
 		<plugins>
 		    <!-- Eclipse project -->
 			<plugin>
@@ -146,19 +110,6 @@
 					<path>/CounterWebApp</path>
 				</configuration>
 			</plugin>
-			
-			<plugin>
-				<groupId>org.jboss.as.plugins</groupId>
-				<artifactId>jboss-as-maven-plugin</artifactId>
-				<version>7.5.Final</version>
-				<configuration>
-					<hostname>${jboss-as.deploy.hostname}</hostname>
-					<username>${jboss-as.deploy.user}</username>
-					<password>${jboss-as.deploy.pass}</password>
-					<port>${jboss-as.deploy.port}</port>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
 
 		</plugins>
 		 <pluginManagement>
@@ -172,18 +123,4 @@
 		</pluginManagement>
 
 	</build>
-	
-	<distributionManagement>
-		<repository>
-			<id>deployment</id>
-			<name>Internal Releases</name>
-			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>deployment</id>
-			<name>Internal Releases</name>
-			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
-	
 </project>
