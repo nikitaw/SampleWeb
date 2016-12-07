@@ -73,11 +73,11 @@
 	</dependencies>
 
 
-<repositories>
-		<!-- Repository location for DWR - 3.0.0-rc3-SNAPSHOT -->
+<!-- <repositories>
+		Repository location for DWR - 3.0.0-rc3-SNAPSHOT
 		<repository>
-			<!-- Please consider setting up your own on-site repository proxy such 
-				as with Nexus and pointing the url element below at that instead -->
+			Please consider setting up your own on-site repository proxy such 
+				as with Nexus and pointing the url element below at that instead
 			<id>oss-sonatype-snapshots</id>
 			<name>OSS Sonatype Snapshots Repository</name>
 			<url>http://oss.sonatype.org/content/repositories/snapshots</url>
@@ -89,7 +89,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
-	
+	 -->
 	
 	<build>
 		<finalName>CounterWebApp</finalName>
@@ -120,20 +120,7 @@
 				</configuration>
 			</plugin>
 			
-		<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-ear-plugin</artifactId>
-				<version>2.9.1</version>
-				<configuration>
-					<modules>
-						<jarModule>
-							<groupId>net.bull.javamelody</groupId>
-							<artifactId>javamelody-core</artifactId>
-							<includeInApplicationXml>true</includeInApplicationXml>
-						</jarModule>
-					</modules>
-				</configuration>
-			</plugin>
+			
 
 			<!-- For Tomcat -->
 			<plugin>
@@ -158,7 +145,7 @@
 
 	</build>
 	
-	<distributionManagement>
+	<!-- <distributionManagement>
 		<repository>
 			<id>deployment</id>
 			<name>Internal Releases</name>
@@ -169,5 +156,5 @@
 			<name>Internal Releases</name>
 			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement> -->
 </project>
